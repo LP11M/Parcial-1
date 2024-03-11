@@ -1,0 +1,180 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+/*Para el título y menú*/
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+body{
+background: url("img/fondo.jfif");
+background-attachment: fixed;
+}
+
+#f{
+    font-family: Verdana, Arial;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    color: black;
+    text-align: right;
+}
+
+#global{
+    width: 65%;
+    margin: 0px auto;
+    margin-top: 30px;
+    padding: 25px;
+    background: orange;
+    box-shadow: 0px 0px 2px gray;
+}
+
+#logo{
+    font-family: Verdana,Arial;
+    font-size:20px;
+    letter-spacing: 2px;
+    line-height: 75px;
+    background: #fbf5ef;
+    color: black;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+    float: left;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    height: 50px; /* ajusta el tamaño de la imagen en relación con el tamaño de la fuente del título */
+    margin-right: 10px; /* ajusta el espacio entre la imagen y el título */
+    align-items: center;
+}
+#menu{
+    font-family: Helvetica,Arial;
+    background: #04b4ae;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 20px;   
+}
+#menu ul{
+    line-height: 46px;
+    list-style: none;
+}
+#menu ul li{
+    height: 46px;
+    display: inline-block;
+    transition: all 300ms;
+}
+#menu ul li:hover{
+    background: #FBF5EF;
+}
+#menu a{
+    display: block;
+    color:#333;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/*Formulario*/
+
+.contenedor{
+    width:700px;
+    margin:40px;
+    background: white;
+    margin-left: 25%;
+}
+.ayuda{
+    font-family: Verdana,Arial;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.formulario .contenedor-inputs{
+    padding:20px;
+    background:#FAFAFA;
+    border-radius:6px 6px 0 0;
+}
+.formulario input[type="text"], .formulario input[type="email"]{
+    display:block;
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    border:none;
+    border-bottom: 2px solid #ccc;
+    font-family: 'Arial 27px',serif;
+    font-size: 18px;
+}
+.formulario input[type="radio"]{
+    display:none;
+}
+
+.formulario .genero{
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.formulario .genero .label-radio{
+    width: 49.5%;
+}
+
+.formulario .genero .hombre{
+    border-radius: 3px 0 0 3px;
+}
+.formulario .genero .mujer{
+    border-radius: 3px 0 0 3px;
+}
+
+.formulario .label-radio{
+    background: rgba(1,223,1,0.4);
+    color:#fff;
+    padding:10px 10px;
+    text-align: center;
+}
+.formulario input[type="radio"]:checked +.label-radio{
+    background: #01DF01;
+    color: #fff;
+}
+.formulario .terminos{
+    text-align:center;
+    color: #424242;
+}
+.formulario .terminos label{
+    margin-left: 10px;
+}
+
+.formulario .error{
+    display:none;
+    margin-top: 20px;
+    border-radius: 3px;
+    background: #F5A9BC;
+    color:2E2E2E;
+    padding:15px 10px;
+    padding-left: 40px;
+}
+.formulario .btn{
+    width:100%;
+    text-align:center;
+    background: #246EB9;
+    color:#FFF;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 0 0 6px 6px;
+    font-family: 'Arial 27px',serif;
+    font-size:18px;
+}
+
+.formulario .btn:hover{
+    background: #81DAF5;
+}

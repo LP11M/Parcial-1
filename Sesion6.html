@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Electronicas Goku</title><!--Título de la pestaña-->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="form.css">
+
+    <!-- Scripts -->
+    <link rel="icon" href="img/favicon.ico"> <!--Insertamos el favicon -->
+</head>
+<body><!-- Empieza el cuerpo del texto-->
+    <!--Para el menú superior-->
+    <section id="global">
+        <header>
+            <div id = "f"></div>
+            
+            <div id="logo">
+                <img class="logo-img" src="img/lorenzo1.png" alt="Lorenzo">
+                    <img class="logo-img" src="img/pedro1.png" alt="Pedro">
+                    <img class="logo-img" src="img/juan1.png" alt="Juan">
+                    <h1>Electronicas Goku</h1>
+                    <img class="logo-img" src="img/juan1.png" alt="Juan">
+                    <img class="logo-img" src="img/pedro1.png" alt="Pedro">
+                    <img class="logo-img" src="img/lorenzo1.png" alt="Lorenzo">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="Goku.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="Sesion6.html">Contacto</a></li>
+                    <li><a target="_blank" href="https://www.youtube.com/watch?v=qmLIFlW2GaE">¿Por qué Goku?</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <!--Formulario-->
+    <div class="contenedor">
+        <p class="ayuda">Ayúdenos con su información para ponernos en contacto con usted</p>
+        <form action="" class="formulario" id="formulario" name="formulario">
+            <div class="contenedor-inputs">
+                <input type="text" name="nombre" placeholder="Nombre">
+                <input type="email" name="correo" placeholder="Correo">
+                <div class="genero">
+                    <input type="radio" name="genero" id="hombre" value="hombre">
+                    <label for="hombre" class="label-radio hombre">Cliente</label>
+                    <input type="radio" name="genero" id="mujer" value="mujer">
+                    <label for="mujer" class="label-radio mujer">Proveedor</label>
+                </div>
+                <div class="terminos">
+                    <input type="checkbox" name="terminos" id="terminos">
+                    <label for="terminos">Acepto términos y condiciones</label>
+                </div>
+                <ul class="error" id="error"></ul>
+            </div>
+            <br>
+            <input type="submit" class="btn" value="Enviar">
+        </form>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
