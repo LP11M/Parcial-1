@@ -1,4 +1,4 @@
-//Reloj
+//Función del reloj
 function updateTime() {
     var now = new Date();
 
@@ -21,8 +21,9 @@ function updateTime() {
     setTimeout(updateTime, 1000);
 }
 
+//FUnción para formulario
 window.onload = function() {
-    updateTime(); // Iniciar el reloj al cargar la página
+    updateTime();
 
     var formulario = document.getElementById('formulario');
     var nombre = formulario.nombre;
