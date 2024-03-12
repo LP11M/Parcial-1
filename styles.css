@@ -107,14 +107,19 @@ h2{
     height: auto;
 }
 
-.video{
-    width:400px;
+.secvideo{
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0 auto;
     margin-bottom: 10px;
+    width:520px;
+}
+.video{
+    width:500px;
+    padding: 10px;
 }
 
 footer{
