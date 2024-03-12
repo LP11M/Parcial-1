@@ -54,7 +54,7 @@ background-attachment: fixed;
     margin-right: 10px; /* ajusta el espacio entre la imagen y el título */
     align-items: center;
 }
-
+/*Menu horizontal*/
 #menu{
     font-family: Helvetica,Arial;
     background: #04b4ae;
@@ -89,7 +89,7 @@ article {
     justify-content: center;
     margin-bottom: 20px;
 }
-
+/*Seccion de cada integrante*/
 .persona{
     padding:20px; /*El texto tiene un margen respecto a su contenedor*/
     background:lightblue;/*Cambiar el color de fondo*/
@@ -102,13 +102,14 @@ article {
     margin-left: 16%;
     
 }
-
+/*Fotos de cada integrante*/
 .foto{
     width: 250px;
     /*height: 200px;*/
     float:inline-end;
     height: auto;
 }
+/*Sidebar de fotos*/
 aside{
     margin-right: 20%;
 }
