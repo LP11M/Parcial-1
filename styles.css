@@ -107,6 +107,16 @@ h2{
     height: auto;
 }
 
+.video{
+    width:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
 footer{
     font-family: Helvetica, Arial;
     color: white;
