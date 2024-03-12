@@ -13,6 +13,8 @@ background: url("img/fondo.jfif");
 background-attachment: fixed;
 }
 
+
+/*Reloj*/
 #f{
     font-family: Verdana, Arial;
     font-size: 20px;
@@ -31,6 +33,7 @@ background-attachment: fixed;
     box-shadow: 0px 0px 2px gray;
 }
 
+/*Titulo de la pagina*/
 #logo{
     font-family: Verdana,Arial;
     font-size:20px;
