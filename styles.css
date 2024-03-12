@@ -96,10 +96,11 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 70%;
     margin: 0 auto;
     max-width: 1200px;
-    text-align: center;
+    
 }
 /*Imagenes dentro del slider*/
 .galeria img{

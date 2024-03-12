@@ -76,7 +76,9 @@ window.onload = function() {
         validarEmail(e);
         validarGender(e);
         validarTerms(e);
+        if(error.innerHTML==''){
         alert("¡Gracias! Sus datos han sido enviados")
+        }
     }
 
     formulario.addEventListener('submit', validarForm);
