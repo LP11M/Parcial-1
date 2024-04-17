@@ -27,4 +27,9 @@ MongoClient.connect(connectionURL, {
     })
 })
 
-//C:\Users\jpmaz\Desktop\Universidad 2.0\Semestre 8\1. Programación para internet\P1\Parcial-1\Backend
+//cd C:\Users\jpmaz\Desktop\Universidad 2.0\Semestre 8\1. Programación para internet\P1\Parcial-1\Backend
+
+//mongodb+srv://00423693:monito@atlascluster.wr1wwug.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster
+
+//Connection string:
+//mongodb+srv://00423693:<password>@atlascluster.wr1wwug.mongodb.net/
