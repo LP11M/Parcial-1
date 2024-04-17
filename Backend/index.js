@@ -1,6 +1,7 @@
 const mongodb = require("mongodb");
 
 const connectionURL = "mongodb+srv://00423693:monito@atlascluster.wr1wwug.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster";
+//const connectionURL = "mongodb+srv://00423693:monito@atlascluster.wr1wwug.mongodb.net/";
 const dbName = "Portafolio";
 
 //get MongoClient
@@ -32,4 +33,4 @@ MongoClient.connect(connectionURL, {
 //mongodb+srv://00423693:monito@atlascluster.wr1wwug.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster
 
 //Connection string:
-//mongodb+srv://00423693:<password>@atlascluster.wr1wwug.mongodb.net/
+//mongodb+srv://00423693:monito@atlascluster.wr1wwug.mongodb.net/
