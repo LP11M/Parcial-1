@@ -3,7 +3,7 @@ var port = 3700;
 const mongodb = require("mongodb");
 
 const connectionURL = "mongodb+srv://juan:monito@atlascluster.wr1wwug.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster"
-const dbName = "Portafolio"
+const dbName = "portafolio"
 
 //get MongoClient
 const MongoClient = mongodb.MongoClient;
@@ -21,7 +21,7 @@ MongoClient.connect(connectionURL, {
   db = connectedClient.db(dbName);
   //now you can write queries
   
-  db.collection("project").find({}).toArray()
+  db.collection("projects").find({}).toArray()
     .then(r => {
       console.log(r);
       app.listen(port, () => {
