@@ -1,7 +1,7 @@
 const mongodb = require("mongodb");
 
 const connectionURL = "mongodb+srv://00423693:monito@atlascluster.wr1wwug.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster";
-const dbName = "portafolio";
+const dbName = "Portafolio";
 
 //get MongoClient
 const MongoClient = mongodb.MongoClient;
@@ -26,3 +26,5 @@ MongoClient.connect(connectionURL, {
       console.error('ERROR:', e);
     })
 })
+
+//C:\Users\jpmaz\Desktop\Universidad 2.0\Semestre 8\1. Programación para internet\P1\Parcial-1\Backend
