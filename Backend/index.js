@@ -19,7 +19,7 @@ MongoClient.connect(connectionURL, {
   db = connectedClient.db(dbName);
   //now you can write queries
   
-  db.collection("projects").find({}).toArray()
+  db.collection("project").find({}).toArray()
     .then(r => {
       console.log(r);
     }).catch(e => {
