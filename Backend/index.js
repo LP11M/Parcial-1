@@ -1,5 +1,5 @@
-var app = require('/app');
-var port = 3700;
+// var app = require('/app');
+// var port = 3700;
 const mongodb = require("mongodb");
 
 const connectionURL = "mongodb+srv://juan:monito@atlascluster.wr1wwug.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster"
@@ -10,9 +10,9 @@ const MongoClient = mongodb.MongoClient;
 
 let db = null;
 
-MongoClient.connect(connectionURL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+MongoClient.connect(connectionURL,{
+  //useNewUrlParser: true,
+  //useUnifiedTopology: true
 }, (err, connectedClient) => {
   if(err){
     throw err;
@@ -22,11 +22,11 @@ MongoClient.connect(connectionURL, {
   //now you can write queries
   
   db.collection("projects").find({}).toArray()
-    .then(r => {
-      console.log(r);
-      app.listen(port, () => {
-        console.log("Servidor corriendo correctamente en la url: localhost:3700");
-      });
+     .then(r => {
+     console.log(r);
+    //   app.listen(port, () => {
+    //     console.log("Servidor corriendo correctamente en la url: localhost:3700");
+    //});
     }).catch(e => {
       console.error('ERROR:', e);
     })
