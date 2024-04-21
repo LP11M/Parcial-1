@@ -1,37 +1,34 @@
-// var app = require('/app');
-// var port = 3700;
-const mongodb = require("mongodb");
+var app = require('./app');
+var port = 3700;
+const { MongoClient } = require('mongodb');
 
-const connectionURL = "mongodb+srv://juan:monito@atlascluster.wr1wwug.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster"
-const dbName = "portafolio"
-
-//get MongoClient
-const MongoClient = mongodb.MongoClient;
+const connectionURL = "mongodb+srv://juan:juan@atlascluster.wr1wwug.mongodb.net/";
+const dbName = "Portafolio";
 
 let db = null;
 
-MongoClient.connect(connectionURL,{
-  //useNewUrlParser: true,
-  //useUnifiedTopology: true
-}, (err, connectedClient) => {
-  if(err){
-    throw err;
+async function connectToMongoDB() {
+  try {
+    const client = new MongoClient(connectionURL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    });
+
+    console.log('Connecting to MongoDB...');
+    await client.connect();
+    console.log('Connected successfully to MongoDB');
+
+    const db = client.db(dbName);
+
+    // Example: Query documents from "projects" collection
+    const projectsCollection = db.collection('project');
+    const projects = await projectsCollection.find({}).toArray();
+    console.log('Retrieved projects:', projects);
+    app.listen(port,() => {
+      console.log("Servidor corriendo correctamente en la url: localhost:3700");
+    });
+  } catch (err) {
+    console.error('Error connecting to MongoDB:', err);
   }
-  //connectedClient will be the connected instance of MongoClient
-  db = connectedClient.db(dbName);
-  //now you can write queries
-  
-  db.collection("projects").find({}).toArray()
-     .then(r => {
-     console.log(r);
-    //   app.listen(port, () => {
-    //     console.log("Servidor corriendo correctamente en la url: localhost:3700");
-    //});
-    }).catch(e => {
-      console.error('ERROR:', e);
-    })
-})
-
-//cd C:\Users\jpmaz\Desktop\Universidad 2.0\Semestre 8\1. Programación para internet\P1\Parcial-1\Backend
-
-//mongodb+srv://juan:monito@atlascluster.wr1wwug.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster
+}
+connectToMongoDB();
