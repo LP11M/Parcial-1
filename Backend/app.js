@@ -7,19 +7,12 @@ var app = express();
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
+//cargar archivo de rutas
+var project_routes = require('./routes/project');
+
 //rutas
+app.use('/api', project_routes);
 
-app.get('/', (req, res) => {
-    res.status(200).send(
-        "<h1>Página de inicio</h1>"
-    );
-})
-
-app.get('/test', (req, res) => {
-    res.status(200).send({
-        message: "Hola mundo desde mi API de NodeJS"
-    });
-});
 
 //Exportar
 module.exports =app;
